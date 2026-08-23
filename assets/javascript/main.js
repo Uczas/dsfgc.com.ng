@@ -1,5 +1,7 @@
 (function() {
-    // ===== CONFIGURATION: all slider IDs and image base names =====
+    // ============================================================
+    // CONFIGURATION: all slider IDs and image base names
+    // ============================================================
     const sliders = [
         { id: 'slider-installation', base: 'installation' },
         { id: 'slider-maintenance', base: 'maintenance' },
@@ -11,7 +13,9 @@
         { id: 'slider-lumos', base: 'lumos' }
     ];
 
-    // ===== BUILD 7 IMAGES FOR EACH SLIDER =====
+    // ============================================================
+    // BUILD 7 IMAGES FOR EACH SLIDER
+    // ============================================================
     sliders.forEach(s => {
         const track = document.getElementById(s.id);
         if (!track) return;
@@ -21,26 +25,25 @@
             img.src = `/images/${s.base}${i}.jpg`;
             img.alt = `${s.base} ${i}`;
             img.loading = 'lazy';
-            // fallback if image missing
             img.onerror = function() {
                 this.style.background = '#b293c9';
                 this.style.minHeight = '120px';
                 this.style.display = 'flex';
                 this.style.alignItems = 'center';
                 this.style.justifyContent = 'center';
-                this.alt = '🖼️';
-                this.src = ''; // prevent loop
+                this.alt = '📷';
+                this.src = '';
             };
             track.appendChild(img);
         }
-        // set first slide active
         const slides = track.querySelectorAll('img');
         if (slides.length) slides[0].classList.add('active');
     });
 
-    // ===== SLIDER CONTROLS: prev/next + indicator update =====
+    // ============================================================
+    // SLIDER CONTROLS: prev/next + indicator update
+    // ============================================================
     document.querySelectorAll('.slider-controls').forEach(ctrl => {
-        // find target from data-target attribute on buttons or the control itself
         let target = ctrl.dataset.target;
         if (!target) {
             const btn = ctrl.querySelector('.slider-btn');
@@ -54,7 +57,6 @@
         if (slides.length === 0) return;
 
         let current = 0;
-        // show first
         slides.forEach((img, idx) => img.classList.toggle('active', idx === 0));
         const indicator = ctrl.querySelector('.slide-indicator');
         if (indicator) indicator.textContent = `1/${slides.length}`;
@@ -81,12 +83,14 @@
         }
     });
 
-    // ===== AUTO-PLAY (optional, subtle) =====
+    // ============================================================
+    // AUTO-PLAY (optional)
+    // ============================================================
     setInterval(() => {
         document.querySelectorAll('.slider-controls').forEach(ctrl => {
             const nextBtn = ctrl.querySelector('.next');
             if (nextBtn) nextBtn.click();
         });
-    }, 7000);
+    }, 6000);
 
 })();
