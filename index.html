@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Divine Step Forward · Solar</title>
+    <!-- Google Font (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <img src="/images/logo.jpg" alt="Divine Step Forward Global Concept International" class="logo-img" onerror="this.style.display='none'">
+                <span class="brand">Divine Step Forward</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Power your world with <span class="gold">solar</span> &amp; <span class="purple">purpose</span></h1>
+            <p>Installation · Maintenance · Kits · Lumos Home Solar</p>
+            <a href="#services" class="btn btn-gold">Explore</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (7 slide images per section) -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section-title"><span class="gold">✦</span> Our Services <span class="gold">✦</span></h2>
+            <div class="service-cards">
+                <!-- service 1: Installation -->
+                <div class="card service-card">
+                    <h3>Solar Installation</h3>
+                    <div class="slider" data-slider="installation">
+                        <div class="slider-track" id="slider-installation">
+                            <!-- 7 images will be injected via js, placeholder -->
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="installation">‹</button>
+                            <span class="slide-indicator" data-target="installation">1/7</span>
+                            <button class="slider-btn next" data-target="installation">›</button>
+                        </div>
+                    </div>
+                    <p class="card-desc">Full residential &amp; commercial solar installation, from assessment to grid connection.</p>
+                </div>
+                <!-- service 2: Maintenance -->
+                <div class="card service-card">
+                    <h3>Solar Maintenance</h3>
+                    <div class="slider" data-slider="maintenance">
+                        <div class="slider-track" id="slider-maintenance"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="maintenance">‹</button>
+                            <span class="slide-indicator" data-target="maintenance">1/7</span>
+                            <button class="slider-btn next" data-target="maintenance">›</button>
+                        </div>
+                    </div>
+                    <p class="card-desc">Preventive and corrective maintenance, cleaning, performance checks, and repairs.</p>
+                </div>
+                <!-- service 3: Kits & Electronics -->
+                <div class="card service-card">
+                    <h3>Solar Kits &amp; Electronics</h3>
+                    <div class="slider" data-slider="kits">
+                        <div class="slider-track" id="slider-kits"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="kits">‹</button>
+                            <span class="slide-indicator" data-target="kits">1/7</span>
+                            <button class="slider-btn next" data-target="kits">›</button>
+                        </div>
+                    </div>
+                    <p class="card-desc">Panels, batteries, inverters, charge controllers, solar fans, TVs, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS (separate section) -->
+    <section class="section products" id="products">
+        <div class="container">
+            <h2 class="section-title"><span class="purple">✦</span> Products <span class="purple">✦</span></h2>
+            <div class="product-grid">
+                <div class="card product-card">
+                    <h4>Solar Panels</h4>
+                    <div class="slider" data-slider="panels">
+                        <div class="slider-track" id="slider-panels"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="panels">‹</button>
+                            <span class="slide-indicator" data-target="panels">1/7</span>
+                            <button class="slider-btn next" data-target="panels">›</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card product-card">
+                    <h4>Batteries &amp; Inverters</h4>
+                    <div class="slider" data-slider="batteries">
+                        <div class="slider-track" id="slider-batteries"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="batteries">‹</button>
+                            <span class="slide-indicator" data-target="batteries">1/7</span>
+                            <button class="slider-btn next" data-target="batteries">›</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card product-card">
+                    <h4>Charge Controllers</h4>
+                    <div class="slider" data-slider="controllers">
+                        <div class="slider-track" id="slider-controllers"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="controllers">‹</button>
+                            <span class="slide-indicator" data-target="controllers">1/7</span>
+                            <button class="slider-btn next" data-target="controllers">›</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card product-card">
+                    <h4>Solar Electronics</h4>
+                    <div class="slider" data-slider="electronics">
+                        <div class="slider-track" id="slider-electronics"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="electronics">‹</button>
+                            <span class="slide-indicator" data-target="electronics">1/7</span>
+                            <button class="slider-btn next" data-target="electronics">›</button>
+                        </div>
+                    </div>
+                    <p class="card-desc">Solar fans, TVs, lighting, and compatible devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS / LUMOS -->
+    <section class="section partners" id="partners">
+        <div class="container">
+            <h2 class="section-title"><span class="gold">⚡</span> Lumos Partner <span class="gold">⚡</span></h2>
+            <div class="partner-box">
+                <div class="lumos-card">
+                    <h3>Lumos Home Solar</h3>
+                    <p>Official partner – sell &amp; install Lumos solar systems. Reliable, pay-as-you-go solar for homes and businesses.</p>
+                    <div class="slider" data-slider="lumos">
+                        <div class="slider-track" id="slider-lumos"></div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-target="lumos">‹</button>
+                            <span class="slide-indicator" data-target="lumos">1/7</span>
+                            <button class="slider-btn next" data-target="lumos">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="/images/logo.jpg" alt="Divine Step Forward" style="height:50px; border-radius:8px;" onerror="this.style.display='none'">
+                <p>Divine Step Forward Global Concept International</p>
+                <p class="gold">Powering tomorrow, today.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>📞 +234 800 123 4567</p>
+                <p>📧 info@divinestepforward.com</p>
+                <p>📍 Lagos, Nigeria</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Divine Step Forward · Golden &amp; Purple energy</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript (dynamic slideshows) -->
+    <script src="/assets/javascript/main.js"></script>
+</body>
+</html>
