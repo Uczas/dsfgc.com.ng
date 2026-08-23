@@ -1,67 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-    <title>Divine Step Forward · Solar</title>
-    <!-- Google Font (optional) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divine Step Forward Global Concept International</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-    <!-- HEADER / NAV -->
-    <header class="header">
-        <div class="container header-inner">
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="top">
+        <div class="container">
             <div class="logo-area">
-                <img src="/images/logo.jpg" alt="Divine Step Forward Global Concept International" class="logo-img" onerror="this.style.display='none'">
-                <span class="brand">Divine Step Forward</span>
+                <img src="/images/logo.jpg" alt="Divine Step Forward" class="logo-img" onerror="this.style.display='none'" />
+                <div class="brand">
+                    Divine Step Forward
+                    <small>Global Concept International</small>
+                </div>
             </div>
             <nav class="nav">
                 <ul>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#lumos">Lumos</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <!-- ========== HERO ========== -->
+    <section class="hero">
         <div class="container hero-content">
-            <h1>Power your world with <span class="gold">solar</span> &amp; <span class="purple">purpose</span></h1>
-            <p>Installation · Maintenance · Kits · Lumos Home Solar</p>
-            <a href="#services" class="btn btn-gold">Explore</a>
+            <div class="badge"><i class="fas fa-sun"></i> Powering Africa's Future</div>
+            <h1>
+                <span class="gold">Solar</span> Solutions for<br />
+                Every <span class="purple">Step</span> Forward
+            </h1>
+            <p>
+                From installation and maintenance to high-quality solar kits and Lumos home systems —
+                we bring reliable, sustainable energy to homes and businesses across Nigeria.
+            </p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Explore Services</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> Get in Touch</a>
+            </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION (7 slide images per section) -->
-    <section class="section services" id="services">
+    <!-- ========== SERVICES ========== -->
+    <section class="section" id="services">
         <div class="container">
-            <h2 class="section-title"><span class="gold">✦</span> Our Services <span class="gold">✦</span></h2>
-            <div class="service-cards">
-                <!-- service 1: Installation -->
-                <div class="card service-card">
+            <div class="section-header">
+                <span class="subtitle"><i class="fas fa-bolt"></i> What We Do</span>
+                <h2>Our <span class="gold">Services</span></h2>
+                <p>End-to-end solar solutions delivered with excellence, integrity, and a divine touch.</p>
+            </div>
+
+            <!-- Service 1: Installation -->
+            <div class="service-block">
+                <div class="service-text">
+                    <span class="service-tag"><i class="fas fa-tools"></i> Service</span>
                     <h3>Solar Installation</h3>
+                    <p>
+                        We provide full-scale solar installation for residential, commercial, and industrial properties.
+                        From site assessment and system design to seamless grid integration, our certified technicians
+                        ensure every panel is positioned for maximum efficiency.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Site survey &amp; energy audit</li>
+                        <li><i class="fas fa-check-circle"></i> Custom system design</li>
+                        <li><i class="fas fa-check-circle"></i> Professional installation &amp; commissioning</li>
+                        <li><i class="fas fa-check-circle"></i> Grid-tied &amp; off-grid solutions</li>
+                    </ul>
+                </div>
+                <div class="service-slider">
                     <div class="slider" data-slider="installation">
-                        <div class="slider-track" id="slider-installation">
-                            <!-- 7 images will be injected via js, placeholder -->
-                        </div>
+                        <div class="slider-track" id="slider-installation"></div>
                         <div class="slider-controls">
                             <button class="slider-btn prev" data-target="installation">‹</button>
                             <span class="slide-indicator" data-target="installation">1/7</span>
                             <button class="slider-btn next" data-target="installation">›</button>
                         </div>
                     </div>
-                    <p class="card-desc">Full residential &amp; commercial solar installation, from assessment to grid connection.</p>
                 </div>
-                <!-- service 2: Maintenance -->
-                <div class="card service-card">
+            </div>
+
+            <!-- Service 2: Maintenance -->
+            <div class="service-block reverse">
+                <div class="service-text">
+                    <span class="service-tag"><i class="fas fa-shield-alt"></i> Service</span>
                     <h3>Solar Maintenance</h3>
+                    <p>
+                        Keep your solar investment performing at its peak with our comprehensive maintenance plans.
+                        We offer regular inspections, cleaning, performance monitoring, and rapid repair services
+                        to maximize your system's lifespan and energy output.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Preventive maintenance schedules</li>
+                        <li><i class="fas fa-check-circle"></i> Panel cleaning &amp; inspection</li>
+                        <li><i class="fas fa-check-circle"></i> Inverter &amp; battery diagnostics</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 emergency repair support</li>
+                    </ul>
+                </div>
+                <div class="service-slider">
                     <div class="slider" data-slider="maintenance">
                         <div class="slider-track" id="slider-maintenance"></div>
                         <div class="slider-controls">
@@ -70,11 +119,27 @@
                             <button class="slider-btn next" data-target="maintenance">›</button>
                         </div>
                     </div>
-                    <p class="card-desc">Preventive and corrective maintenance, cleaning, performance checks, and repairs.</p>
                 </div>
-                <!-- service 3: Kits & Electronics -->
-                <div class="card service-card">
+            </div>
+
+            <!-- Service 3: Kits & Electronics -->
+            <div class="service-block">
+                <div class="service-text">
+                    <span class="service-tag"><i class="fas fa-box-open"></i> Service</span>
                     <h3>Solar Kits &amp; Electronics</h3>
+                    <p>
+                        We supply a complete range of solar components and compatible electronics. Whether you need
+                        a full kit for a new installation or replacement parts, we offer genuine, high-performance
+                        products from trusted manufacturers.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Solar panels (mono &amp; poly)</li>
+                        <li><i class="fas fa-check-circle"></i> Deep-cycle batteries &amp; inverters</li>
+                        <li><i class="fas fa-check-circle"></i> Charge controllers &amp; wiring</li>
+                        <li><i class="fas fa-check-circle"></i> Solar fans, TVs, lighting &amp; more</li>
+                    </ul>
+                </div>
+                <div class="service-slider">
                     <div class="slider" data-slider="kits">
                         <div class="slider-track" id="slider-kits"></div>
                         <div class="slider-controls">
@@ -83,19 +148,26 @@
                             <button class="slider-btn next" data-target="kits">›</button>
                         </div>
                     </div>
-                    <p class="card-desc">Panels, batteries, inverters, charge controllers, solar fans, TVs, and more.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCTS (separate section) -->
-    <section class="section products" id="products">
+    <!-- ========== PRODUCTS ========== -->
+    <section class="section section-alt" id="products">
         <div class="container">
-            <h2 class="section-title"><span class="purple">✦</span> Products <span class="purple">✦</span></h2>
-            <div class="product-grid">
-                <div class="card product-card">
+            <div class="section-header">
+                <span class="subtitle"><i class="fas fa-th-large"></i> What We Sell</span>
+                <h2>Our <span class="gold">Products</span></h2>
+                <p>Quality solar equipment and electronics to power every aspect of your life.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: Panels -->
+                <div class="product-card">
+                    <div class="icon"><i class="fas fa-solar-panel"></i></div>
                     <h4>Solar Panels</h4>
+                    <p>High-efficiency mono and polycrystalline panels for maximum energy harvest.</p>
                     <div class="slider" data-slider="panels">
                         <div class="slider-track" id="slider-panels"></div>
                         <div class="slider-controls">
@@ -105,8 +177,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card product-card">
+
+                <!-- Product 2: Batteries & Inverters -->
+                <div class="product-card">
+                    <div class="icon"><i class="fas fa-bolt"></i></div>
                     <h4>Batteries &amp; Inverters</h4>
+                    <p>Reliable energy storage and power conversion for seamless backup and off-grid living.</p>
                     <div class="slider" data-slider="batteries">
                         <div class="slider-track" id="slider-batteries"></div>
                         <div class="slider-controls">
@@ -116,8 +192,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card product-card">
+
+                <!-- Product 3: Charge Controllers -->
+                <div class="product-card">
+                    <div class="icon"><i class="fas fa-microchip"></i></div>
                     <h4>Charge Controllers</h4>
+                    <p>Smart MPPT and PWM controllers to protect your batteries and optimize charging.</p>
                     <div class="slider" data-slider="controllers">
                         <div class="slider-track" id="slider-controllers"></div>
                         <div class="slider-controls">
@@ -127,8 +207,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card product-card">
+
+                <!-- Product 4: Solar Electronics -->
+                <div class="product-card">
+                    <div class="icon"><i class="fas fa-tv"></i></div>
                     <h4>Solar Electronics</h4>
+                    <p>Energy-efficient appliances including solar fans, TVs, lighting, and more.</p>
                     <div class="slider" data-slider="electronics">
                         <div class="slider-track" id="slider-electronics"></div>
                         <div class="slider-controls">
@@ -137,20 +221,31 @@
                             <button class="slider-btn next" data-target="electronics">›</button>
                         </div>
                     </div>
-                    <p class="card-desc">Solar fans, TVs, lighting, and compatible devices.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PARTNERS / LUMOS -->
-    <section class="section partners" id="partners">
+    <!-- ========== LUMOS PARTNER ========== -->
+    <section class="lumos-section" id="lumos">
         <div class="container">
-            <h2 class="section-title"><span class="gold">⚡</span> Lumos Partner <span class="gold">⚡</span></h2>
-            <div class="partner-box">
-                <div class="lumos-card">
-                    <h3>Lumos Home Solar</h3>
-                    <p>Official partner – sell &amp; install Lumos solar systems. Reliable, pay-as-you-go solar for homes and businesses.</p>
+            <div class="lumos-grid">
+                <div class="lumos-text">
+                    <div class="lumos-tag"><i class="fas fa-handshake"></i> Official Partner</div>
+                    <h2>Lumos Home Solar</h2>
+                    <p>
+                        We are proud to partner with <strong>Lumos</strong> — a global leader in pay-as-you-go solar
+                        solutions. Lumos Home Solar brings affordable, reliable electricity to households and businesses,
+                        with flexible payment plans and remote monitoring.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Lumos Golden &amp; Silver systems</li>
+                        <li><i class="fas fa-check-circle"></i> Pay-as-you-go financing</li>
+                        <li><i class="fas fa-check-circle"></i> Remote monitoring &amp; support</li>
+                        <li><i class="fas fa-check-circle"></i> 5-year warranty &amp; maintenance</li>
+                    </ul>
+                </div>
+                <div class="lumos-slider">
                     <div class="slider" data-slider="lumos">
                         <div class="slider-track" id="slider-lumos"></div>
                         <div class="slider-controls">
@@ -164,27 +259,55 @@
         </div>
     </section>
 
-    <!-- CONTACT / FOOTER -->
-    <footer id="contact" class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <img src="/images/logo.jpg" alt="Divine Step Forward" style="height:50px; border-radius:8px;" onerror="this.style.display='none'">
-                <p>Divine Step Forward Global Concept International</p>
-                <p class="gold">Powering tomorrow, today.</p>
+    <!-- ========== CONTACT / FOOTER ========== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Divine Step Forward</h3>
+                    <p><em>Global Concept International</em></p>
+                    <p style="margin-top: 0.5rem; color: #9685a8;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Lagos, Nigeria
+                    </p>
+                    <p style="color: #9685a8;">
+                        <i class="fas fa-phone" style="color: var(--gold);"></i> +234 800 123 4567
+                    </p>
+                    <p style="color: #9685a8;">
+                        <i class="fas fa-envelope" style="color: var(--gold);"></i> info@divinestepforward.com
+                    </p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#lumos">Lumos Partnership</a></li>
+                        <li><a href="#top">Back to Top</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Office Hours</h4>
+                    <ul style="color: #9685a8;">
+                        <li>Mon – Fri: 8:00am – 6:00pm</li>
+                        <li>Sat: 9:00am – 3:00pm</li>
+                        <li>Sun: Closed</li>
+                        <li style="margin-top: 0.5rem; color: var(--gold);">
+                            <i class="fas fa-phone"></i> Emergency: 24/7
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p>📞 +234 800 123 4567</p>
-                <p>📧 info@divinestepforward.com</p>
-                <p>📍 Lagos, Nigeria</p>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 <span class="gold">Divine Step Forward Global Concept International</span> &mdash;
+                    Powered by <span class="gold">solar</span> &amp; <span class="gold">purpose</span>.
+                </p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Divine Step Forward · Golden &amp; Purple energy</p>
         </div>
     </footer>
 
-    <!-- JavaScript (dynamic slideshows) -->
+    <!-- JavaScript -->
     <script src="/assets/javascript/main.js"></script>
+
 </body>
 </html>
