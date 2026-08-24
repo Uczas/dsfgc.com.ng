@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   background: var(--cream);
   color: #2a1f33;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container {
@@ -163,13 +165,15 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 270px;
+    width: 280px;
+    max-width: 80vw;
     height: 100vh;
     background: var(--dark);
-    padding: 5rem 2rem 2rem;
+    padding: 5rem 1.5rem 2rem;
     transition: right 0.35s ease;
     box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);
     border-left: 3px solid var(--gold);
+    overflow-y: auto;
   }
 
   .nav.open {
@@ -213,7 +217,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 999;
   }
 
@@ -438,7 +442,7 @@ body {
   width: 20px;
 }
 
-/* ===== SLIDER (vertical, no controls) ===== */
+/* ===== SLIDER (vertical, no controls, with transition variety) ===== */
 .slider {
   position: relative;
   background: #e8dfd4;
@@ -452,6 +456,7 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .slider-track img {
@@ -459,12 +464,97 @@ body {
   height: 100%;
   object-fit: cover;
   flex-shrink: 0;
-  display: none;
-  transition: opacity 0.6s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
 .slider-track img.active {
-  display: block;
+  opacity: 1;
+  position: relative;
+}
+
+/* Different transition styles per slider */
+.slider[data-slider="installation"] .slider-track img {
+  transition: opacity 1s ease, transform 1.2s ease;
+}
+.slider[data-slider="installation"] .slider-track img.active {
+  transform: scale(1);
+}
+.slider[data-slider="installation"] .slider-track img:not(.active) {
+  transform: scale(1.05);
+}
+
+.slider[data-slider="maintenance"] .slider-track img {
+  transition: opacity 0.6s ease, clip-path 1s ease;
+}
+.slider[data-slider="maintenance"] .slider-track img.active {
+  clip-path: inset(0);
+}
+.slider[data-slider="maintenance"] .slider-track img:not(.active) {
+  clip-path: inset(0 0 100% 0);
+}
+
+.slider[data-slider="kits"] .slider-track img {
+  transition: opacity 0.9s ease, filter 0.9s ease;
+}
+.slider[data-slider="kits"] .slider-track img.active {
+  filter: blur(0);
+}
+.slider[data-slider="kits"] .slider-track img:not(.active) {
+  filter: blur(8px);
+}
+
+.slider[data-slider="panels"] .slider-track img {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.slider[data-slider="panels"] .slider-track img.active {
+  transform: scale(1) rotate(0);
+}
+.slider[data-slider="panels"] .slider-track img:not(.active) {
+  transform: scale(0.9) rotate(-2deg);
+}
+
+.slider[data-slider="batteries"] .slider-track img {
+  transition: opacity 0.5s ease, border-radius 0.8s ease;
+}
+.slider[data-slider="batteries"] .slider-track img.active {
+  border-radius: 0;
+}
+.slider[data-slider="batteries"] .slider-track img:not(.active) {
+  border-radius: 50%;
+}
+
+.slider[data-slider="controllers"] .slider-track img {
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.slider[data-slider="controllers"] .slider-track img.active {
+  transform: scale(1) translateX(0);
+}
+.slider[data-slider="controllers"] .slider-track img:not(.active) {
+  transform: scale(0.8) translateX(30px);
+}
+
+.slider[data-slider="electronics"] .slider-track img {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.slider[data-slider="electronics"] .slider-track img.active {
+  transform: scale(1) rotate(0);
+}
+.slider[data-slider="electronics"] .slider-track img:not(.active) {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.slider[data-slider="lumos"] .slider-track img {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.slider[data-slider="lumos"] .slider-track img.active {
+  transform: scale(1) translateY(0);
+}
+.slider[data-slider="lumos"] .slider-track img:not(.active) {
+  transform: scale(1.05) translateY(-20px);
 }
 
 /* ===== PRODUCTS ===== */
