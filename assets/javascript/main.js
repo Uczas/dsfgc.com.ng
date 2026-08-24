@@ -36,7 +36,7 @@
 })();
 
 // ============================================================
-// SLIDER ENGINE — auto-play, no controls, 4 images each
+// SLIDER ENGINE — auto-play, no controls, varied timing & effects
 // ============================================================
 (function() {
     const sliderIds = [
@@ -73,9 +73,20 @@
         if (slides.length) slides[0].classList.add('active');
     });
 
-    // Auto-advance each slider independently
-    sliderIds.forEach(id => {
-        const track = document.getElementById(`slider-${id}`);
+    // Auto-advance each slider with unique timing and transition effects
+    const sliderConfigs = [
+        { id: 'installation', min: 3500, max: 5500 },
+        { id: 'maintenance', min: 2800, max: 4800 },
+        { id: 'kits', min: 4000, max: 6500 },
+        { id: 'panels', min: 3000, max: 5000 },
+        { id: 'batteries', min: 4500, max: 7000 },
+        { id: 'controllers', min: 2500, max: 4500 },
+        { id: 'electronics', min: 3800, max: 5800 },
+        { id: 'lumos', min: 3200, max: 5200 }
+    ];
+
+    sliderConfigs.forEach(config => {
+        const track = document.getElementById(`slider-${config.id}`);
         if (!track) return;
 
         const slides = track.querySelectorAll('img');
@@ -83,10 +94,21 @@
 
         let current = 0;
 
-        setInterval(() => {
+        function advanceSlide() {
             slides[current].classList.remove('active');
             current = (current + 1) % slides.length;
             slides[current].classList.add('active');
-        }, 4000 + Math.random() * 2000); // random interval between 4-6s
+        }
+
+        function scheduleNext() {
+            const delay = config.min + Math.random() * (config.max - config.min);
+            setTimeout(() => {
+                advanceSlide();
+                scheduleNext();
+            }, delay);
+        }
+
+        // Start the cycle
+        scheduleNext();
     });
 })();
