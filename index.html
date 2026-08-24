@@ -21,7 +21,7 @@
 </head>
 <body>
 
-    <!-- ========== HEADER ========== -->
+    <!-- ========== HEADER with HAMBURGER ========== -->
     <header class="header" id="top">
         <div class="container">
             <div class="logo-area">
@@ -31,12 +31,20 @@
                     <small>Global Concept International</small>
                 </div>
             </div>
-            <nav class="nav">
+            
+            <!-- Hamburger Toggle -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="nav" id="nav-menu">
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#lumos">Lumos</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#services"><i class="fas fa-tools"></i> Services</a></li>
+                    <li><a href="#products"><i class="fas fa-th-large"></i> Products</a></li>
+                    <li><a href="#lumos"><i class="fas fa-handshake"></i> Lumos</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -285,18 +293,18 @@
                 <div>
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#lumos">Lumos Partnership</a></li>
-                        <li><a href="#top">Back to Top</a></li>
+                        <li><a href="#services"><i class="fas fa-tools"></i> Services</a></li>
+                        <li><a href="#products"><i class="fas fa-th-large"></i> Products</a></li>
+                        <li><a href="#lumos"><i class="fas fa-handshake"></i> Lumos Partnership</a></li>
+                        <li><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Office Hours</h4>
                     <ul style="color: #9685a8;">
-                        <li>Mon – Fri: 8:00am – 6:00pm</li>
-                        <li>Sat: 9:00am – 3:00pm</li>
-                        <li>Sun: Closed</li>
+                        <li><i class="fas fa-clock" style="color: var(--gold);"></i> Mon – Fri: 8:00am – 6:00pm</li>
+                        <li><i class="fas fa-clock" style="color: var(--gold);"></i> Sat: 9:00am – 3:00pm</li>
+                        <li><i class="fas fa-clock" style="color: var(--gold);"></i> Sun: Closed</li>
                         <li style="margin-top: 0.5rem; color: var(--gold);">
                             <i class="fas fa-phone"></i> Emergency: 24/7
                         </li>
