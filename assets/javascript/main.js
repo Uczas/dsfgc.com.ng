@@ -1,3 +1,44 @@
+// ============================================================
+// HAMBURGER MENU TOGGLE
+// ============================================================
+(function() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('open');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Close menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+})();
+
 (function() {
     // ============================================================
     // CONFIGURATION: all slider IDs and image base names
