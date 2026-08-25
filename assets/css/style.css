@@ -872,6 +872,7 @@ h2 {
     box-shadow: var(--shadow);
   }
 
+  .nav-menu.show,
   .nav-menu.open {
     display: grid;
     gap: 18px;
