@@ -1,232 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divine Step Forward · Solar</title>
-  
-  <!-- Google Fonts + Font Awesome -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Divine Step Forward Global Concept International</title>
+
+  <meta name="description"
+        content="Professional solar installation, maintenance, solar kits and Lumos L1 systems in Ozoro, Delta State Nigeria.">
+
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="header" id="top">
-  <div class="container">
-    <div class="logo-area">
-      <img src="/images/logo.png" alt="Divine Step Forward" class="logo-img" onerror="this.style.display='none'" />
-      <div class="brand">Divine Step Forward <small>Global Concept International</small></div>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-    <nav class="nav" id="nav-menu">
-      <ul>
-        <li><a href="#services"><i class="fas fa-tools"></i> Services</a></li>
-        <li><a href="#products"><i class="fas fa-th-large"></i> Products</a></li>
-        <li><a href="#lumos"><i class="fas fa-handshake"></i> Lumos</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Page Loader -->
+  <div class="loader">
+    <div class="loader-ring"></div>
+    <p>Loading clean energy...</p>
   </div>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-content">
-    <div class="badge"><i class="fas fa-sun"></i> Powering Africa's Future</div>
-    <h1><span class="gold">Solar</span> Solutions for<br />Every <span class="purple">Step</span> Forward</h1>
-    <p>From installation and maintenance to high-quality solar kits and Lumos home systems — we bring reliable, sustainable energy to homes and businesses across Nigeria.</p>
-    <div class="hero-buttons">
-      <a href="#services" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Explore Services</a>
-      <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> Get in Touch</a>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container nav-wrapper">
+
+      <a href="#home" class="logo">
+        <img src="images/logo.jpg" alt="Divine Step Forward logo">
+        <span>DSFGC</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#lumos" class="nav-link">Lumos L1</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="#contact" class="nav-button">Get a Quote <i class="ri-arrow-right-line"></i></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="ri-menu-3-line"></i>
+      </button>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-header">
-      <span class="subtitle"><i class="fas fa-bolt"></i> What We Do</span>
-      <h2>Our <span class="gold">Services</span></h2>
-      <p>End-to-end solar solutions delivered with excellence, integrity, and a divine touch.</p>
-    </div>
+  <main>
 
-    <!-- Service 1 -->
-    <div class="service-block">
-      <div class="service-text">
-        <span class="service-tag"><i class="fas fa-tools"></i> Service</span>
-        <h3>Solar Installation</h3>
-        <p>Full-scale solar installation for residential, commercial, and industrial properties. From site assessment to seamless grid integration.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Site survey &amp; energy audit</li>
-          <li><i class="fas fa-check-circle"></i> Custom system design</li>
-          <li><i class="fas fa-check-circle"></i> Professional installation</li>
-          <li><i class="fas fa-check-circle"></i> Grid-tied &amp; off-grid solutions</li>
-        </ul>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-slider">
+
+        <div class="hero-slide active">
+          <div class="slide-image">
+            <img src="images/slide-1.jpg" alt="Solar panel installation">
+          </div>
+          <div class="slide-content container">
+            <span class="eyebrow"><i class="ri-sun-line"></i> Powering a brighter future</span>
+            <h1>Reliable Solar Energy for a <span>Better Tomorrow.</span></h1>
+            <p>
+              Professional solar installation, maintenance and quality solar products
+              for homes, businesses and organizations.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="primary-button">
+                Request a Consultation <i class="ri-arrow-right-line"></i>
+              </a>
+              <a href="#services" class="outline-button">Explore Services</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-slide">
+          <div class="slide-image">
+            <img src="images/slide-2.jpg" alt="Solar batteries and inverter">
+          </div>
+          <div class="slide-content container">
+            <span class="eyebrow"><i class="ri-battery-2-charge-line"></i> Smart energy solutions</span>
+            <h1>Quality Solar Systems Built Around <span>Your Needs.</span></h1>
+            <p>
+              From batteries and panels to inverters and charge controllers,
+              we help you choose the right solution.
+            </p>
+            <div class="hero-actions">
+              <a href="#products" class="primary-button">
+                View Our Products <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-slide">
+          <div class="slide-image">
+            <img src="images/slide-3.jpg" alt="Lumos L1 solar system">
+          </div>
+          <div class="slide-content container">
+            <span class="eyebrow"><i class="ri-home-gear-line"></i> In partnership with Lumos Solar</span>
+            <h1>Get the Lumos L1 System with <span>Flexible Payment Plans.</span></h1>
+            <p>
+              Enjoy affordable pay-go purchase options for 12 months or 2 years.
+            </p>
+            <div class="hero-actions">
+              <a href="#lumos" class="primary-button">
+                Learn About Lumos L1 <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button id="previousSlide"><i class="ri-arrow-left-line"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button id="nextSlide"><i class="ri-arrow-right-line"></i></button>
+        </div>
+
       </div>
-      <div class="service-slider">
-        <div class="slider" data-slider="installation">
-          <div class="slider-track" id="slider-installation"></div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div>
+          <i class="ri-shield-check-line"></i>
+          <span>Professional Installation</span>
+        </div>
+        <div>
+          <i class="ri-tools-line"></i>
+          <span>Reliable Maintenance</span>
+        </div>
+        <div>
+          <i class="ri-map-pin-2-line"></i>
+          <span>Serving Delta State</span>
+        </div>
+        <div>
+          <i class="ri-customer-service-2-line"></i>
+          <span>Dedicated Support</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Service 2 -->
-    <div class="service-block reverse">
-      <div class="service-text">
-        <span class="service-tag"><i class="fas fa-shield-alt"></i> Service</span>
-        <h3>Solar Maintenance</h3>
-        <p>Keep your solar investment performing at its peak with comprehensive maintenance plans, inspections, cleaning, and rapid repairs.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Preventive maintenance</li>
-          <li><i class="fas fa-check-circle"></i> Panel cleaning &amp; inspection</li>
-          <li><i class="fas fa-check-circle"></i> Inverter &amp; battery diagnostics</li>
-          <li><i class="fas fa-check-circle"></i> 24/7 emergency support</li>
-        </ul>
-      </div>
-      <div class="service-slider">
-        <div class="slider" data-slider="maintenance">
-          <div class="slider-track" id="slider-maintenance"></div>
-        </div>
-      </div>
-    </div>
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
 
-    <!-- Service 3 -->
-    <div class="service-block">
-      <div class="service-text">
-        <span class="service-tag"><i class="fas fa-box-open"></i> Service</span>
-        <h3>Solar Kits &amp; Electronics</h3>
-        <p>Complete range of solar components and compatible electronics from trusted manufacturers — panels, batteries, inverters, and more.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Solar panels (mono &amp; poly)</li>
-          <li><i class="fas fa-check-circle"></i> Deep-cycle batteries &amp; inverters</li>
-          <li><i class="fas fa-check-circle"></i> Charge controllers &amp; wiring</li>
-          <li><i class="fas fa-check-circle"></i> Solar fans, TVs, lighting</li>
-        </ul>
-      </div>
-      <div class="service-slider">
-        <div class="slider" data-slider="kits">
-          <div class="slider-track" id="slider-kits"></div>
+        <div class="about-visual reveal">
+          <div class="about-image-main">
+            <img src="images/solar-installation.jpg" alt="Solar installation by DSFGC">
+          </div>
+          <div class="experience-card">
+            <strong>100%</strong>
+            <span>Clean Energy<br>Commitment</span>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- PRODUCTS -->
-<section class="section section-alt" id="products">
-  <div class="container">
-    <div class="section-header">
-      <span class="subtitle"><i class="fas fa-th-large"></i> What We Sell</span>
-      <h2>Our <span class="gold">Products</span></h2>
-      <p>Quality solar equipment and electronics to power every aspect of your life.</p>
-    </div>
-    <div class="products-grid">
-      <div class="product-card">
-        <div class="icon"><i class="fas fa-solar-panel"></i></div>
-        <h4>Solar Panels</h4>
-        <p>High-efficiency mono &amp; poly panels.</p>
-        <div class="slider" data-slider="panels">
-          <div class="slider-track" id="slider-panels"></div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="icon"><i class="fas fa-bolt"></i></div>
-        <h4>Batteries &amp; Inverters</h4>
-        <p>Reliable storage &amp; power conversion.</p>
-        <div class="slider" data-slider="batteries">
-          <div class="slider-track" id="slider-batteries"></div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="icon"><i class="fas fa-microchip"></i></div>
-        <h4>Charge Controllers</h4>
-        <p>Smart MPPT &amp; PWM controllers.</p>
-        <div class="slider" data-slider="controllers">
-          <div class="slider-track" id="slider-controllers"></div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="icon"><i class="fas fa-tv"></i></div>
-        <h4>Solar Electronics</h4>
-        <p>Fans, TVs, lighting &amp; more.</p>
-        <div class="slider" data-slider="electronics">
-          <div class="slider-track" id="slider-electronics"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="about-content reveal">
+          <span class="section-label">Who We Are</span>
+          <h2>Moving Communities Forward with <span>Clean Energy.</span></h2>
+          <p>
+            Divine Step Forward Global Concept International is a trusted solar
+            installation and service company based in Ozoro, Delta State, Nigeria.
+          </p>
+          <p>
+            We provide dependable renewable energy solutions for homes, offices,
+            businesses and communities across Isoko and other local government
+            areas in Delta State.
+          </p>
 
-<!-- LUMOS -->
-<section class="lumos-section" id="lumos">
-  <div class="container">
-    <div class="lumos-grid">
-      <div class="lumos-text">
-        <div class="lumos-tag"><i class="fas fa-handshake"></i> Official Partner</div>
-        <h2>Lumos Home Solar</h2>
-        <p>We are proud to partner with <strong>Lumos</strong> — a global leader in pay-as-you-go solar solutions. Affordable, reliable electricity with flexible payment plans.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Lumos Golden &amp; Silver systems</li>
-          <li><i class="fas fa-check-circle"></i> Pay-as-you-go financing</li>
-          <li><i class="fas fa-check-circle"></i> Remote monitoring &amp; support</li>
-          <li><i class="fas fa-check-circle"></i> 5-year warranty &amp; maintenance</li>
-        </ul>
+          <div class="about-list">
+            <div><i class="ri-checkbox-circle-fill"></i> Experienced solar professionals</div>
+            <div><i class="ri-checkbox-circle-fill"></i> Quality and durable products</div>
+            <div><i class="ri-checkbox-circle-fill"></i> Affordable energy solutions</div>
+          </div>
+
+          <a href="#contact" class="primary-button">Talk to an Expert <i class="ri-arrow-right-line"></i></a>
+        </div>
+
       </div>
-      <div class="lumos-slider">
-        <div class="slider" data-slider="lumos">
-          <div class="slider-track" id="slider-lumos"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">What We Do</span>
+          <h2>Complete Solar Solutions for <span>Every Need.</span></h2>
+          <p>We make clean and reliable energy simple, accessible and affordable.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="ri-sun-foggy-line"></i></div>
+            <h3>Solar Installation</h3>
+            <p>Professional installation of complete solar power systems for residential and commercial use.</p>
+            <a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="ri-tools-fill"></i></div>
+            <h3>Solar Maintenance</h3>
+            <p>System inspection, troubleshooting, repairs and maintenance to keep your solar system efficient.</p>
+            <a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="ri-battery-charge-line"></i></div>
+            <h3>Solar Kits & Equipment</h3>
+            <p>Quality batteries, solar panels, inverters, charge controllers and other system components.</p>
+            <a href="#products">View products <i class="ri-arrow-right-line"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="ri-tv-2-line"></i></div>
+            <h3>Solar-Compatible Electronics</h3>
+            <p>Shop solar fans, televisions, lighting solutions and other energy-efficient electronics.</p>
+            <a href="#products">View products <i class="ri-arrow-right-line"></i></a>
+          </article>
+
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer class="footer" id="contact">
-  <div class="container">
-    <div class="footer-grid">
+    <!-- Products -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Our Products</span>
+          <h2>Power Your Life with <span>Better Products.</span></h2>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card reveal">
+            <img src="images/solar-kits.jpg" alt="Solar panels and solar kits">
+            <div class="product-overlay">
+              <h3>Solar Panels & Kits</h3>
+              <p>Dependable power generation solutions.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <img src="images/solar-maintenance.jpg" alt="Solar battery and inverter">
+            <div class="product-overlay">
+              <h3>Batteries & Inverters</h3>
+              <p>Store and use energy when you need it.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <img src="images/lumos-l1.jpg" alt="Lumos L1 solar system">
+            <div class="product-overlay">
+              <h3>Lumos L1 System</h3>
+              <p>Flexible pay-go solar energy.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lumos -->
+    <section class="lumos-section" id="lumos">
+      <div class="container lumos-grid">
+        <div class="lumos-content reveal">
+          <span class="section-label light-label">Lumos Solar Partnership</span>
+          <h2>Own a Lumos L1 System with Flexible Payment Options.</h2>
+          <p>
+            We partner with Lumos Solar to bring reliable electricity to more homes
+            and businesses through convenient pay-go purchase plans.
+          </p>
+
+          <div class="payment-options">
+            <div><strong>12</strong><span>Months Plan</span></div>
+            <div><strong>24</strong><span>Months Plan</span></div>
+          </div>
+
+          <a href="#contact" class="gold-button">Ask About Lumos L1 <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="lumos-image reveal">
+          <img src="images/lumos-l1.jpg" alt="Lumos L1 solar system">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-content reveal">
+        <span class="section-label light-label">Ready for Reliable Power?</span>
+        <h2>Let’s Build Your Solar Solution.</h2>
+        <p>Speak with our team today and take the first step towards clean, dependable energy.</p>
+        <a href="#contact" class="gold-button">Contact Us Today <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-content reveal">
+          <span class="section-label">Get in Touch</span>
+          <h2>Let’s Discuss Your <span>Energy Needs.</span></h2>
+          <p>
+            Contact us for installation, maintenance, product enquiries or Lumos L1
+            payment plan information.
+          </p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="ri-map-pin-line"></i>
+              <div>
+                <strong>Our Office</strong>
+                <p>No. 81 Ughelli Express Way, Ozoro, Delta State, Nigeria</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="ri-phone-line"></i>
+              <div>
+                <strong>Call Us</strong>
+                <p>
+                  <a href="tel:07039289575">0703 928 9575</a><br>
+                  <a href="tel:09135570302">0913 557 0302</a><br>
+                  <a href="tel:08089196503">0808 919 6503</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="ri-mail-line"></i>
+              <div>
+                <strong>Email Us</strong>
+                <p><a href="mailto:service@dsfgc.com.ng">service@dsfgc.com.ng</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" action="mailto:service@dsfgc.com.ng" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="Name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="Phone" placeholder="Your phone number" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="Service">
+              <option>Solar Installation</option>
+              <option>Solar Maintenance</option>
+              <option>Solar Kits and Equipment</option>
+              <option>Solar Electronics</option>
+              <option>Lumos L1 System</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+
+          <button type="submit" class="primary-button">
+            Send Enquiry <i class="ri-send-plane-line"></i>
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
       <div class="footer-brand">
-        <h3>Divine Step Forward</h3>
-        <p><em>Global Concept International</em></p>
-        <p style="margin-top:0.5rem;color:#9685a8;"><i class="fas fa-map-marker-alt" style="color:var(--gold);"></i> Lagos, Nigeria</p>
-        <p style="color:#9685a8;"><i class="fas fa-phone" style="color:var(--gold);"></i> +234 800 123 4567</p>
-        <p style="color:#9685a8;"><i class="fas fa-envelope" style="color:var(--gold);"></i> info@divinestepforward.com</p>
+        <a href="#home" class="logo">
+          <img src="images/logo.jpg" alt="DSFGC logo">
+          <span>DSFGC</span>
+        </a>
+        <p>Reliable solar energy solutions for a brighter and more sustainable future.</p>
       </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#services"><i class="fas fa-tools"></i> Services</a></li>
-          <li><a href="#products"><i class="fas fa-th-large"></i> Products</a></li>
-          <li><a href="#lumos"><i class="fas fa-handshake"></i> Lumos</a></li>
-          <li><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Office Hours</h4>
-        <ul style="color:#9685a8;">
-          <li><i class="fas fa-clock" style="color:var(--gold);"></i> Mon – Fri: 8am – 6pm</li>
-          <li><i class="fas fa-clock" style="color:var(--gold);"></i> Sat: 9am – 3pm</li>
-          <li><i class="fas fa-clock" style="color:var(--gold);"></i> Sun: Closed</li>
-          <li style="margin-top:0.5rem;color:var(--gold);"><i class="fas fa-phone"></i> Emergency: 24/7</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 <span class="gold">Divine Step Forward Global Concept International</span> — Powered by <span class="gold">solar</span> &amp; <span class="gold">purpose</span>.</p>
-    </div>
-  </div>
-</footer>
 
-<!-- JavaScript -->
-<script src="assets/javascript/main.js"></script>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <a href="tel:07039289575">0703 928 9575</a>
+        <a href="mailto:service@dsfgc.com.ng">service@dsfgc.com.ng</a>
+        <span>Ozoro, Delta State</span>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Divine Step Forward Global Concept International. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2347039289575" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <script src="assets/javascript/script.js"></script>
 </body>
 </html>
