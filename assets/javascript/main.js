@@ -1,130 +1,274 @@
-const loader = document.querySelector('.loader');
-const header = document.querySelector('.header');
-const menuToggle = document.querySelector('#menuToggle');
-const navMenu = document.querySelector('#navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    loader.classList.add('hidden');
-  }, 600);
-});
+  /* =========================
+     PAGE LOADER
+  ========================== */
 
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
-});
+  function hidePageLoader() {
+    const loader = document.getElementById("pageLoader");
 
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
+    if (!loader) return;
 
-  const icon = menuToggle.querySelector('i');
-  icon.className = navMenu.classList.contains('open')
-    ? 'ri-close-line'
-    : 'ri-menu-3-line';
-});
+    loader.classList.add("hidden");
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    menuToggle.querySelector('i').className = 'ri-menu-3-line';
-  });
-});
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 700);
+  }
 
-/* Hero slider */
-const slides = document.querySelectorAll('.hero-slide');
-const dotsContainer = document.querySelector('#sliderDots');
-const previousButton = document.querySelector('#previousSlide');
-const nextButton = document.querySelector('#nextSlide');
+  window.addEventListener("load", hidePageLoader);
 
-let currentSlide = 0;
-let autoSlide;
+  // Safety fallback in case another script or image delays loading
+  setTimeout(hidePageLoader, 4000);
 
-slides.forEach((_, index) => {
-  const dot = document.createElement('span');
-  dot.className = `dot ${index === 0 ? 'active' : ''}`;
 
-  dot.addEventListener('click', () => {
-    showSlide(index);
-    restartAutoSlide();
-  });
+  /* =========================
+     MOBILE HAMBURGER MENU
+  ========================== */
 
-  dotsContainer.appendChild(dot);
-});
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
 
-const dots = document.querySelectorAll('.dot');
+  if (menuToggle && navMenu) {
+    const menuIcon = menuToggle.querySelector("i");
 
-function showSlide(index) {
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
+    menuToggle.addEventListener("click", function () {
+      const menuIsOpen = navMenu.classList.toggle("show");
 
-  currentSlide = (index + slides.length) % slides.length;
+      menuToggle.classList.toggle("active", menuIsOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        menuIsOpen ? "Close menu" : "Open menu"
+      );
 
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
-}
-
-function startAutoSlide() {
-  autoSlide = setInterval(() => {
-    showSlide(currentSlide + 1);
-  }, 6000);
-}
-
-function restartAutoSlide() {
-  clearInterval(autoSlide);
-  startAutoSlide();
-}
-
-previousButton.addEventListener('click', () => {
-  showSlide(currentSlide - 1);
-  restartAutoSlide();
-});
-
-nextButton.addEventListener('click', () => {
-  showSlide(currentSlide + 1);
-  restartAutoSlide();
-});
-
-startAutoSlide();
-
-/* Scroll reveal animation */
-const revealElements = document.querySelectorAll('.reveal');
-
-const revealObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        revealObserver.unobserve(entry.target);
+      if (menuIcon) {
+        menuIcon.className = menuIsOpen
+          ? "ri-close-line"
+          : "ri-menu-3-line";
       }
     });
-  },
-  { threshold: 0.12 }
-);
 
-revealElements.forEach(element => revealObserver.observe(element));
+    // Close the menu when a navigation link is clicked
+    const navLinks = navMenu.querySelectorAll("a");
 
-/* Automatically highlight current section */
-const sections = document.querySelectorAll('main section[id]');
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("show");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-label", "Open menu");
 
-window.addEventListener('scroll', () => {
-  let currentSection = '';
+        if (menuIcon) {
+          menuIcon.className = "ri-menu-3-line";
+        }
+      });
+    });
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
+    // Close menu when clicking outside it
+    document.addEventListener("click", function (event) {
+      const clickedInsideMenu =
+        navMenu.contains(event.target) ||
+        menuToggle.contains(event.target);
 
-    if (window.scrollY >= sectionTop) {
-      currentSection = section.getAttribute('id');
+      if (!clickedInsideMenu) {
+        navMenu.classList.remove("show");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-label", "Open menu");
+
+        if (menuIcon) {
+          menuIcon.className = "ri-menu-3-line";
+        }
+      }
+    });
+  }
+
+
+  /* =========================
+     HERO SLIDER
+  ========================== */
+
+  const slides = document.querySelectorAll(".hero-slide");
+  const previousSlide = document.getElementById("previousSlide");
+  const nextSlide = document.getElementById("nextSlide");
+  const sliderDots = document.getElementById("sliderDots");
+
+  let currentSlide = 0;
+  let slideTimer;
+
+  function showSlide(index) {
+    if (!slides.length) return;
+
+    if (index >= slides.length) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = slides.length - 1;
+    } else {
+      currentSlide = index;
     }
+
+    slides.forEach(function (slide, slideIndex) {
+      slide.classList.toggle("active", slideIndex === currentSlide);
+    });
+
+    const dots = document.querySelectorAll(".slider-dot");
+
+    dots.forEach(function (dot, dotIndex) {
+      dot.classList.toggle("active", dotIndex === currentSlide);
+    });
+  }
+
+  function startSlider() {
+    if (slides.length > 1) {
+      slideTimer = setInterval(function () {
+        showSlide(currentSlide + 1);
+      }, 6000);
+    }
+  }
+
+  function resetSliderTimer() {
+    clearInterval(slideTimer);
+    startSlider();
+  }
+
+  if (slides.length && sliderDots) {
+    slides.forEach(function (_, index) {
+      const dot = document.createElement("button");
+
+      dot.className = "slider-dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show slide " + (index + 1));
+
+      dot.addEventListener("click", function () {
+        showSlide(index);
+        resetSliderTimer();
+      });
+
+      sliderDots.appendChild(dot);
+    });
+
+    showSlide(0);
+    startSlider();
+  }
+
+  if (nextSlide) {
+    nextSlide.addEventListener("click", function () {
+      showSlide(currentSlide + 1);
+      resetSliderTimer();
+    });
+  }
+
+  if (previousSlide) {
+    previousSlide.addEventListener("click", function () {
+      showSlide(currentSlide - 1);
+      resetSliderTimer();
+    });
+  }
+
+
+  /* =========================
+     SCROLL REVEAL ANIMATION
+  ========================== */
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealElements.forEach(function (element) {
+      element.classList.add("visible");
+    });
+  }
+
+
+  /* =========================
+     ACTIVE NAVIGATION LINK
+  ========================== */
+
+  const sections = document.querySelectorAll("main section[id]");
+  const navigationLinks = document.querySelectorAll(".nav-link");
+
+  function updateActiveLink() {
+    let currentSection = "";
+
+    sections.forEach(function (section) {
+      const sectionTop = section.offsetTop - 180;
+
+      if (window.scrollY >= sectionTop) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    navigationLinks.forEach(function (link) {
+      link.classList.remove("active");
+
+      if (link.getAttribute("href") === "#" + currentSection) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveLink);
+  updateActiveLink();
+
+
+  /* =========================
+     CURRENT YEAR
+  ========================== */
+
+  const yearElement = document.getElementById("year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+
+  /* =========================
+     BROKEN IMAGE HANDLING
+  ========================== */
+
+  const images = document.querySelectorAll("img");
+
+  images.forEach(function (image) {
+    image.addEventListener("error", function () {
+      image.classList.add("image-error");
+      image.alt = "Image currently unavailable";
+    });
   });
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
 
-    if (link.getAttribute('href') === `#${currentSection}`) {
-      link.classList.add('active');
-    }
-  });
+  /* =========================
+     CONTACT FORM MESSAGE
+  ========================== */
+
+  const contactForm = document.querySelector(".contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function () {
+      const submitButton = contactForm.querySelector(
+        'button[type="submit"]'
+      );
+
+      if (submitButton) {
+        submitButton.innerHTML =
+          'Opening email application <i class="ri-loader-4-line"></i>';
+        submitButton.disabled = true;
+      }
+    });
+  }
 });
-
-/* Footer year */
-document.querySelector('#year').textContent = new Date().getFullYear();
